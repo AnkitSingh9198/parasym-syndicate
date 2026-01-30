@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  height: 200vh; /* required for scroll animation */
+  background: black;
+}
+
+.canvas {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.text {
+  position: absolute;
+  top: 20vh;
+  left: 6vw;
+  z-index: 2;
+}
+
+.text h1 {
+  font-size: clamp(56px, 7vw, 120px);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+}
+
+.about {
+  margin-top: 60px;
+  max-width: 480px;
+}
+
+.about span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+.hero {
+  position: relative;
+  height: 200vh;
+  background: black;
+}
+
+.canvas {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}

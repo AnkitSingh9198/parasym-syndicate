@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 8vw;
+}
+
+h1 {
+  font-size: clamp(42px, 6vw, 96px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 56px);
+  margin-bottom: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
