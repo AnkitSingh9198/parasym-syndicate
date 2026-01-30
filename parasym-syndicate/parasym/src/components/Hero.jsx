@@ -10,22 +10,21 @@ export default function Hero() {
     <section className={styles.hero}>
       <Canvas
         className={styles.canvas}
-        camera={{ position: [0, 1.2, 6], fov: 40 }}
+        camera={{ position: [0, 2.5, 10], fov: 45 }}
       >
         <HeroScene scroll={scroll} />
       </Canvas>
 
-      <div className={styles.text}>
-        <h1>EMPOWERING LIQUID</h1>
-        <h1>DIGITAL ASSETS</h1>
-        <h1>MARKETS</h1>
+      <div className={styles.content}>
+        <h1>SECURING</h1>
+        <h1>DIGITAL</h1>
+        <h1>INFRASTRUCTURE</h1>
 
         <div className={styles.about}>
           <span>WE ARE RAVEN</span>
           <p>
-            Raven is a boutique proprietary trading firm providing
-            liquidity and market-making across crypto, prediction
-            markets, and electronic financial venues.
+            Raven is a cyber-security firm protecting infrastructure,
+            data, and digital assets across global networks.
           </p>
         </div>
       </div>

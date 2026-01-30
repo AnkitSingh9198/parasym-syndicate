@@ -1,7 +1,7 @@
 .hero {
   position: relative;
-  height: 200vh; /* required for scroll animation */
-  background: black;
+  height: 200vh;
+  background: #05060a;
 }
 
 .canvas {
@@ -10,37 +10,25 @@
   height: 100vh;
 }
 
-.text {
+.content {
   position: absolute;
-  top: 20vh;
-  left: 6vw;
+  top: 18vh;
+  left: 8vw;
   z-index: 2;
 }
 
-.text h1 {
+.content h1 {
   font-size: clamp(56px, 7vw, 120px);
   line-height: 0.95;
-  letter-spacing: 0.02em;
 }
 
 .about {
   margin-top: 60px;
-  max-width: 480px;
+  max-width: 520px;
 }
 
 .about span {
   font-size: 12px;
   letter-spacing: 2px;
   opacity: 0.6;
-}
-.hero {
-  position: relative;
-  height: 200vh;
-  background: black;
-}
-
-.canvas {
-  position: sticky;
-  top: 0;
-  height: 100vh;
 }
