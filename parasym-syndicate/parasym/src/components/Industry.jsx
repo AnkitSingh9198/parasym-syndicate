@@ -17,7 +17,7 @@ export default function Industry() {
   }, []);
 
   return (
-    <section ref={ref}>
+    <section ref={ref} data-parallax>
       <h2>Powering the Industry</h2>
     </section>
   );

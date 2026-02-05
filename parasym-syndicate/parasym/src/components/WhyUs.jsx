@@ -18,7 +18,7 @@ export default function WhyUs() {
   }, []);
 
   return (
-    <section className="whySection">
+    <section className="whySection" data-parallax>
       <h2>Why Us</h2>
       <p className="why">Integrity</p>
       <p className="why">Transparency</p>

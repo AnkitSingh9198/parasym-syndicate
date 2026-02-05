@@ -33,7 +33,7 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={ref} className={styles.section}>
+    <section ref={ref} className={styles.section} data-parallax>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.textLines} />

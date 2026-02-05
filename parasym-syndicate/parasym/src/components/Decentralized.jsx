@@ -18,7 +18,7 @@ export default function Decentralized() {
   }, []);
 
   return (
-    <section ref={ref}>
+    <section ref={ref} data-parallax>
       <h2>Decentralized Exchanges</h2>
       <p>Advanced strategies for on-chain liquidity.</p>
     </section>

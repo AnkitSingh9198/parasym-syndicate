@@ -8,15 +8,19 @@ import WhyUs from "./components/WhyUs";
 import Careers from "./components/Careers";
 import Footer from "./components/Footer";
 import useSmoothScroll from "./hooks/useSmoothScroll";
+import Products from "./components/Product";
+import useSectionParallax from "./hooks/useSectionParallax";
 
 function App() {
   useSmoothScroll();
+  useSectionParallax();
 
   return (
     <>
       <Navbar />
       <Hero />
       <About />
+      <Products/>
       <Centralized />
       <Decentralized />
       <Industry />

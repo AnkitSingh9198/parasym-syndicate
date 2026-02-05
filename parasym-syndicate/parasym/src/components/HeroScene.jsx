@@ -9,16 +9,14 @@ export default function HeroScene({ scroll }) {
   const group = useRef();
   const { camera } = useThree();
 
-  useFrame((state) => {
-    const t = state.clock.elapsedTime;
+  useFrame(() => {
     const safeScroll = Number.isFinite(scroll) ? scroll : 0;
 
-    // Smooth camera motion (alive feeling)
-    camera.position.x = Math.sin(t * 0.2) * 0.4;
+    // Keep camera steady (no orbit/float), only respond to scroll depth.
+    camera.position.x = 0;
     camera.position.y = 2.5 + safeScroll * 1.2;
     camera.lookAt(0, 0, 0);
 
-    // Scene depth movement
     if (group.current) {
       group.current.position.z = -safeScroll * 4;
     }
