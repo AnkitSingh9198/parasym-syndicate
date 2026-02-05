@@ -3,6 +3,7 @@ import { useRef } from "react";
 import GridPlane from "./GridPlane";
 import DataFlow from "./DataFlow";
 import CoreOrb from "./CoreOrb";
+import ChipCluster from "./ChipCluster";
 
 export default function HeroScene({ scroll }) {
   const group = useRef();
@@ -10,14 +11,17 @@ export default function HeroScene({ scroll }) {
 
   useFrame((state) => {
     const t = state.clock.elapsedTime;
+    const safeScroll = Number.isFinite(scroll) ? scroll : 0;
 
     // Smooth camera motion (alive feeling)
     camera.position.x = Math.sin(t * 0.2) * 0.4;
-    camera.position.y = 2.5 + scroll * 1.2;
+    camera.position.y = 2.5 + safeScroll * 1.2;
     camera.lookAt(0, 0, 0);
 
     // Scene depth movement
-    group.current.position.z = -scroll * 4;
+    if (group.current) {
+      group.current.position.z = -safeScroll * 4;
+    }
   });
 
   return (
@@ -30,6 +34,7 @@ export default function HeroScene({ scroll }) {
       {/* Layers */}
       <GridPlane scroll={scroll} />
       <DataFlow scroll={scroll} />
+      <ChipCluster scroll={scroll} />
       <CoreOrb scroll={scroll} />
     </group>
   );

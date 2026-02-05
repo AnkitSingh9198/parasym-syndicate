@@ -17,6 +17,7 @@ export default function DataFlow({ scroll }) {
 
   useFrame((state) => {
     const t = state.clock.elapsedTime;
+    if (!group.current) return;
     group.current.children.forEach((line, i) => {
       line.position.z = ((t * 2 + i) % 20) - 10;
       line.material.opacity = 0.3 + Math.sin(t + i) * 0.2;

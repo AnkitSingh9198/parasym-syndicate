@@ -6,10 +6,12 @@ export default function CoreOrb({ scroll }) {
 
   useFrame((state) => {
     const t = state.clock.elapsedTime;
+    const safeScroll = Number.isFinite(scroll) ? scroll : 0;
+    if (!orb.current) return;
 
     orb.current.rotation.y += 0.01;
     orb.current.scale.setScalar(1 + Math.sin(t * 2) * 0.08);
-    orb.current.position.y = Math.sin(t) * 0.3 + scroll * 1.2;
+    orb.current.position.y = Math.sin(t) * 0.3 + safeScroll * 1.2;
   });
 
   return (

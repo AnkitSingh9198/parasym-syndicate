@@ -6,7 +6,9 @@ export default function GridPlane({ scroll }) {
 
   useFrame((state) => {
     const t = state.clock.elapsedTime;
-    grid.current.position.z = (t * 1.2 + scroll * 6) % 10;
+    const safeScroll = Number.isFinite(scroll) ? scroll : 0;
+    if (!grid.current) return;
+    grid.current.position.z = (t * 1.2 + safeScroll * 6) % 10;
   });
 
   return (

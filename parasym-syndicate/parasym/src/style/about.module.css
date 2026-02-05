@@ -1,0 +1,201 @@
+.section {
+  position: relative;
+  background: radial-gradient(90% 100% at 70% 40%, #1a0b00 0%, #050505 55%, #000 100%);
+  overflow: hidden;
+  padding: 140px 8vw;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(320px, 1.1fr);
+  gap: 6vw;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.textLines {
+  position: absolute;
+  inset: -60px -80px -60px -80px;
+  background:
+    linear-gradient(90deg, rgba(255, 150, 50, 0.35), rgba(255, 120, 30, 0)) 0 40px / 180px 2px repeat-x,
+    linear-gradient(90deg, rgba(255, 150, 50, 0.25), rgba(255, 120, 30, 0)) 0 80px / 220px 2px repeat-x,
+    linear-gradient(90deg, rgba(255, 150, 50, 0.2), rgba(255, 120, 30, 0)) 0 120px / 260px 2px repeat-x;
+  opacity: 0.7;
+  animation: textFlow 3.2s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.35) 60%, rgba(0, 0, 0, 0) 85%);
+  -webkit-mask-image: radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.35) 60%, rgba(0, 0, 0, 0) 85%);
+}
+
+.eyebrow {
+  font-size: 14px;
+  letter-spacing: 4px;
+  opacity: 0.7;
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: clamp(32px, 4.2vw, 56px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.copy {
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.85;
+  margin-bottom: 18px;
+}
+
+.invested {
+  margin-top: 32px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  opacity: 0.6;
+}
+
+.investedLogos {
+  margin-top: 16px;
+  display: flex;
+  gap: 24px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+.visual {
+  position: relative;
+  height: 440px;
+  border-radius: 28px;
+  background: radial-gradient(60% 60% at 50% 35%, rgba(255, 170, 60, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: drop-shadow(0 0 40px rgba(255, 140, 20, 0.25));
+  overflow: hidden;
+}
+
+.circuit {
+  position: absolute;
+  inset: -50px -70px -50px -70px;
+  background:
+    linear-gradient(135deg, transparent 46%, rgba(255, 180, 80, 0.7) 47%, rgba(255, 210, 120, 0.95) 48%, transparent 49%) 0 0 / 160px 120px,
+    linear-gradient(45deg, transparent 46%, rgba(255, 160, 60, 0.55) 47%, rgba(255, 210, 120, 0.9) 48%, transparent 49%) 0 0 / 220px 180px;
+  opacity: 0.85;
+  animation: circuitFlow 4.5s linear infinite;
+  filter: drop-shadow(0 0 12px rgba(255, 180, 80, 0.9));
+  mask-image: radial-gradient(circle at 55% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0) 75%);
+  -webkit-mask-image: radial-gradient(circle at 55% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0) 75%);
+}
+
+.flowLines {
+  position: absolute;
+  inset: 160px -40px 120px -40px;
+  background:
+    linear-gradient(90deg, rgba(255, 200, 110, 0.9), rgba(255, 120, 30, 0)) 0 0 / 140px 2px repeat-x,
+    linear-gradient(90deg, rgba(255, 180, 90, 0.7), rgba(255, 120, 30, 0)) 0 18px / 200px 2px repeat-x,
+    linear-gradient(90deg, rgba(255, 160, 80, 0.5), rgba(255, 120, 30, 0)) 0 36px / 240px 2px repeat-x;
+  opacity: 0.95;
+  animation: flow 2.4s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 140, 20, 0.9));
+}
+
+.chip {
+  position: absolute;
+  right: 70px;
+  top: 130px;
+  width: 210px;
+  height: 150px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #1b1108 0%, #0b0705 100%);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(255, 170, 60, 0.45);
+}
+
+.chipTop {
+  position: absolute;
+  inset: 16px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 190, 90, 0.9);
+  box-shadow:
+    inset 0 0 28px rgba(255, 190, 90, 0.95),
+    0 0 28px rgba(255, 190, 90, 0.95);
+}
+
+.chipTop::after {
+  content: "MRF";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #ffe3b0;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-shadow: 0 0 16px rgba(255, 210, 120, 0.95);
+}
+
+.chipGlow {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: -22px;
+  height: 60px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 230, 150, 0.98) 0 10px,
+    rgba(255, 200, 110, 0.35) 10px 16px
+  );
+  filter: blur(4px);
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(255, 200, 110, 0.95);
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0 0, 0 18px, 0 36px;
+  }
+  100% {
+    background-position: 220px 0, 280px 18px, 340px 36px;
+  }
+}
+
+@keyframes circuitFlow {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 180px 140px, -220px 180px;
+  }
+}
+
+@keyframes textFlow {
+  0% {
+    background-position: 0 40px, 0 80px, 0 120px;
+  }
+  100% {
+    background-position: 260px 40px, 320px 80px, 380px 120px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    height: 360px;
+  }
+
+  .chip {
+    right: 40px;
+    top: 110px;
+    width: 180px;
+    height: 130px;
+  }
+}
